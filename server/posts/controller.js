@@ -29,3 +29,13 @@ module.exports.updatePost = async function(req, res, next) {
     }
 }
 
+module.exports.deletePost = async function(req, res, next) {
+    const id = req.params.id
+    if(req.session.role === 'admin') {
+        await Posts.findByIdAndRemove(id)
+        res.status(200).json('Post deleted')
+    } else {
+        res.status(403).json('You do not have permission to delete this post')
+    }
+}
+

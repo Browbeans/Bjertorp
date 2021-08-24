@@ -5,7 +5,7 @@ const postRouter = express.Router()
 
 postRouter.post('/addPost', controller.addPost)
 postRouter.put('/changePost/:id', controller.updatePost)
-postRouter.delete('/deletePost/:id')
+postRouter.delete('/deletePost/:id', controller.deletePost)
 
 
 module.exports = postRouter
