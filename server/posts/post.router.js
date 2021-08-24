@@ -4,7 +4,7 @@ const controller = require('./controller')
 const postRouter = express.Router()
 
 postRouter.post('/addPost', controller.addPost)
-postRouter.put('/changePost/:id')
+postRouter.put('/changePost/:id', controller.updatePost)
 postRouter.delete('/deletePost/:id')
 
 

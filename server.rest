@@ -50,3 +50,14 @@ Content-Type: application/json
     "headline": "Välkommen medlemmar", 
     "text": "Banan är tyvärr stängd pga regn"
 }
+
+
+###
+
+PUT http://localhost:5000/changePost/612485f1c283f131008fea10
+Content-Type: application/json
+
+{
+    "headline": "Hejsan", 
+    "text": "Banan öppnar"
+}
