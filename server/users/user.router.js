@@ -9,5 +9,6 @@ userRouter.get('/getUser', controller.getUser)
 userRouter.post('/createUser', controller.createUser)
 userRouter.post('/login', controller.handleLogin)
 userRouter.delete('/logout', controller.handleLogout)
+userRouter.get('/currentUser', controller.getCurrentUser)
 
 module.exports = userRouter

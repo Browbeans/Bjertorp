@@ -2,6 +2,7 @@ const cookieSession = require('cookie-session')
 const express = require('express')
 const mongoose = require('mongoose')
 const userRouter = require('./users/user.router')
+const postRouter = require('./posts/post.router')
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -25,6 +26,7 @@ app.use(cookieSession({
 }))
 
 app.use(userRouter)
+app.use(postRouter)
 
 app.get("/", (req, res) => {
     console.log('Server Connected')

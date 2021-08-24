@@ -1,6 +1,11 @@
-import express from 'express'
+const express = require('express')
+const controller = require('./controller')
 
 const postRouter = express.Router()
 
+postRouter.post('/addPost', controller.addPost)
+postRouter.put('/changePost/:id')
+postRouter.delete('/deletePost/:id')
 
-export default postRouter
+
+module.exports = postRouter
