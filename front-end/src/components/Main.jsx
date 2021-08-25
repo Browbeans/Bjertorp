@@ -1,6 +1,7 @@
 import { Route, Switch } from "react-router-dom"
 import "../style/main.css"
 import GridSection from "./GridSection"
+import News from "./news"
 
 function Main() {
     return(
@@ -10,7 +11,7 @@ function Main() {
                     <GridSection />
                 </Route>
                 <Route path="/news">
-                    
+                    <News />
                 </Route>
                 <Route path="/court-status">
 

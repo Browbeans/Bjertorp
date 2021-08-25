@@ -39,3 +39,7 @@ module.exports.deletePost = async function(req, res, next) {
     }
 }
 
+module.exports.allPosts = async function(req, res) {
+    const posts = await Posts.find()
+    res.send(posts)
+}

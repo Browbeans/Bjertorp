@@ -1,16 +1,17 @@
 import './App.css';
 import Layout from './components/Layout';
 import { BrowserRouter } from "react-router-dom" 
+import RequestProvider from './contexts/request-context';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Layout>
-          
-        </Layout>
-      
-      </BrowserRouter>
+      <RequestProvider>
+        <BrowserRouter>
+          <Layout>
+          </Layout>
+        </BrowserRouter>
+      </RequestProvider>
     </div>
   );
 }

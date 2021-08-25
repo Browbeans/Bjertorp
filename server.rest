@@ -67,3 +67,8 @@ Content-Type: application/json
 
 
 DELETE http://localhost:5000/deletePost/612485f1c283f131008fea10
+
+
+###
+
+GET http://localhost:5000/allPosts
