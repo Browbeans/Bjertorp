@@ -1,28 +1,38 @@
 import "../style/main.css"
+import { Link } from "react-router-dom"
 
 function GridSection() {
 
     return(
         <div className="grid-section">
             <div className="news">
-                <h3>
-                    Nyheter
-                </h3>
+                <Link to="/news" style={{textDecoration: "none"}}>
+                    <h3>
+                        Nyheter
+                    </h3>
+                </Link>
             </div>
             <div className="court-status">
-                <h3>
-                    Banstatus
-                </h3>
+                <Link to="/court-status" style={{textDecoration: "none"}}>
+                    <h3>
+                        Banstatus
+                    </h3>
+                </ Link>
             </div>
+
             <div className="booking">
-                <h3>
-                    Boka din tid här
-                </h3>
+                <Link to="/booking" style={{textDecoration: "none"}}>
+                    <h3>
+                       Boka din tid här
+                    </h3>
+                </Link>
             </div>
             <div className="court-guide">
-                <h3>
-                    Banan
-                </h3>
+                <Link to="/court-guide" style={{textDecoration: "none"}}>
+                    <h3>
+                        Banan
+                    </h3>
+                </Link>    
             </div>
         </div>
     )
