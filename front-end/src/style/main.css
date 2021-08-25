@@ -1,0 +1,51 @@
+.main {
+    width: 70%;
+    height: 100%;
+}
+
+.grid-section {
+    width: 100%;
+    height: 80%;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 2rem;
+}
+
+.news {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    background: #2C3E44;
+    border-radius: 1.3rem;
+}
+
+.court-status {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background: #4AE077;
+    border-radius: 1.3rem;
+}
+
+.booking {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5; 
+    grid-row-end: 8;
+    background: #4AE077;
+    border-radius: 1.3rem;
+}
+
+.court-guide {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4; 
+    grid-row-end: 8;
+    background: #2C3E44;
+    border-radius: 1.3rem;
+}
