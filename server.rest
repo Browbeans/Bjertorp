@@ -47,8 +47,8 @@ POST http://localhost:5000/addPost
 Content-Type: application/json 
 
 {
-    "headline": "Välkommen medlemmar", 
-    "text": "Banan är tyvärr stängd pga regn"
+    "headline": "Testing ny new", 
+    "text": "KM bästboll"
 }
 
 

@@ -18,7 +18,6 @@ function News() {
             {requestContext.allPosts.map((post) =>(
                 <div id={post.text}>
                     <h2>{post.headline}</h2>
-                    <p>{post.text}</p>
                 </div>
             ))}
         </div>
