@@ -5,19 +5,26 @@ import { Component, createContext } from 'react';
 
 export const RequestContext = createContext({
     setPosts: () => {}, 
-    allPosts: []
+    allPosts: [], 
+    specificPost: {},
+    addSpecificPost: () => {}
 });
 
 class RequestProvider extends Component {
 
   state = {
-    allPosts: []
+    allPosts: [], 
+    specificPost: {}
   }
  
   addPostsToState = async () => {
     const request = await axios.get("/allPosts")
     this.setState({ allPosts: request.data })
-    console.log(this.state.allPosts)
+  }
+
+  addSpecificPostToState = async (id) => {
+    const request = await axios.get("/specificPost/" + id)
+    this.setState({specificPost: request.data})
   }
 
   componentDidMount = () => {
@@ -29,7 +36,9 @@ class RequestProvider extends Component {
       <RequestContext.Provider
         value={{  
         allPosts: this.state.allPosts,
-        setPosts: this.addPostsToState
+        setPosts: this.addPostsToState,
+        addSpecificPost: this.addSpecificPostToState,
+        specificPost: this.state.specificPost
         }}
       >
         {this.props.children}

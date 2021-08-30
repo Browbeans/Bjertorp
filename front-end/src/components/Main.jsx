@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom"
 import "../style/main.css"
 import GridSection from "./GridSection"
 import News from "./news"
+import SingleNews from "./SingleNews"
 
 function Main() {
     return(
@@ -21,6 +22,9 @@ function Main() {
                 </Route>
                 <Route path="/court-guide">
 
+                </Route>
+                <Route path="/specificNews/:id">
+                     <SingleNews/>
                 </Route>
 
             </Switch>

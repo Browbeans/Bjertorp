@@ -17,6 +17,10 @@
     width: 50%;
 }
 
+.navigation a {
+    height: 90%;
+}
+
 .left-image {
     height: 100%;
     width: 16rem;

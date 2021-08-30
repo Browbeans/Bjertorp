@@ -47,7 +47,7 @@ POST http://localhost:5000/addPost
 Content-Type: application/json 
 
 {
-    "headline": "Testing ny new", 
+    "headline": "HELLOW WORLD", 
     "text": "KM bästboll"
 }
 
@@ -72,3 +72,9 @@ DELETE http://localhost:5000/deletePost/612485f1c283f131008fea10
 ###
 
 GET http://localhost:5000/allPosts
+
+
+###
+
+
+GET http://localhost:5000/specificPost/61251626523a143cc0b5be3f

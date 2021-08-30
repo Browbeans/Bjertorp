@@ -2,7 +2,6 @@ const Posts = require('./post.model')
 const User = require('../users/user.model')
 
 module.exports.addPost = async function(req, res, next ) {
-
     const { headline, text } = req.body
     if(req.session.role === 'admin') {
         const newPost = await new Posts ({
@@ -40,6 +39,12 @@ module.exports.deletePost = async function(req, res, next) {
 }
 
 module.exports.allPosts = async function(req, res) {
-    const posts = await Posts.find()
+    const posts = await Posts.find().sort({ createdAt: -1})
     res.send(posts)
+}
+
+module.exports.getSpecificPost = async function(req, res) {
+    const id = req.params.id
+    const specificPost = await Posts.findById(id)
+    res.send(specificPost)
 }

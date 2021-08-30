@@ -2,6 +2,7 @@ import "../style/header.css"
 import stenhaga from "../assets/pics/stenhaga.png"
 import swegon from "../assets/pics/swegon.png"
 import bjertorp from "../assets/pics/Hanna/small-logo.png"
+import { Link } from "react-router-dom"
 
 function Header() {
     return(
@@ -12,7 +13,9 @@ function Header() {
             <div className="navigation">
                 <span>MENU</span>
                 <span>MENU</span>
-                <img src={bjertorp} alt="" />
+                <Link to="/">
+                    <img src={bjertorp} alt="" />
+                </Link>
                 <span>MENU</span>
                 <span>MENU</span>
             </div>

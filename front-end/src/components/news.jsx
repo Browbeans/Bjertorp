@@ -1,25 +1,26 @@
 import "../style/news.css"
-import axios from "axios"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { RequestContext } from "../contexts/request-context"
+import { Link } from "react-router-dom" 
 
 
 function News() {
-    const requestContext = useContext(RequestContext)
+    const {allPosts, setPosts} = useContext(RequestContext)
 
-    const anrop = async function () {
-        const request = await axios.get('/getUser')
-        const result = request.data
-        console.log(result)
-    }
+
+   useEffect(() => {
+        setPosts()
+   }, [setPosts])
 
     return( 
         <div className="news-container">
-            {requestContext.allPosts.map((post) =>(
-                <div id={post.text}>
-                    <h2>{post.headline}</h2>
-                </div>
-            ))}
+                {allPosts.map((post) =>(
+                    <div className="single-news" key={post._id}>
+                        <Link to={"/specificNews/" + post._id}>
+                            <h2>{post.headline}</h2>
+                        </Link>
+                    </div>
+                ))}
         </div>
     )
 }
